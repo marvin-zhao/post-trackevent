@@ -1,0 +1,8 @@
+Plugin Name: Add Post TrackEvent
+Plugin URI: http://xfeng.me/add-post-trackevent-wordpress-plugin/
+Description: This plugin automatically add the onclick="_gaq.push(['_trackEvent', 'category', 'action', 'URL']);" to link in a post. \n You can modify catego
+ry and action that you like. You can choose opt_label as domain or url.
+Author: JoysBoy 
+Author URI: http://xfeng.me
+Version: 0.1
+Put in /wp-content/plugins/ of your Wordpress installation
