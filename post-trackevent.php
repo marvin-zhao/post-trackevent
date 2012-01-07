@@ -13,10 +13,10 @@ function add_post_trackevent_replace ($content)
 {   global $post;
 	//事件跟踪标签为完整Url
 	$pattern = "/<a(.*?)href=(\'|\")(http:\/\/|https:\/\/)((?!xfeng)[^(\'|\")]*(?<!(\.bmp|\.gif|\.jpg|\.png))(?<!\.jpeg))(\'|\")(.*?)>(.*?)<\/a>/i";
-	$replacement = '<a$1href=$2$3$4$6 onclick="_gaq.push([\'_trackEvent\', \'OutgoLink\', \'Goto inPost Link\' \'$4\']);" $7>$8</a>';
+	$replacement = '<a$1href=$2$3$4$6 onclick="_gaq.push([\'_trackEvent\', \'OutgoLink\', \'Goto inPost Link\', \'$4\']);" $7>$8</a>';
 	//事件跟踪标签仅为域名，如果不想标签为完整地址请注释上面两行代码，取消下面两行代码的注释
 	//$pattern = "/<a(.*?)href=(\'|\")(http:\/\/|https:\/\/)((?!xfeng)[^\/]*)\/([^(\'|\")]*(?<!(\.bmp|\.gif|\.jpg|\.png))(?<!\.jpeg))(\'|\")(.*?)>(.*?)<\/a>/i";
-	//$replacement = '<a$1href=$2$3$4/$5$7 onclick="_gaq.push([\'_trackEvent\', \'OutgoLink\', \'Goto inPost Link\' \'$4\']);" $8>$9</a>';
+	//$replacement = '<a$1href=$2$3$4/$5$7 onclick="_gaq.push([\'_trackEvent\', \'OutgoLink\', \'Goto inPost Link\', \'$4\']);" $8>$9</a>';
     $content = preg_replace($pattern, $replacement, $content);
     return $content;
 }
